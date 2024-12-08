@@ -1,0 +1,175 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero {
+    text-align: center;
+    background-color: #6e0001; 
+    color: #fff;
+    padding: 50px 20px;
+}
+
+#about, #collection, #event {
+    padding: 40px 20px;
+    text-align: center;
+}
+/* Conteneur avec l'image en arrière-plan */
+.background {
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    background-size: cover; /* Adapte l'image au conteneur */
+    background-position: center; /* Centre l'image */
+}
+.background img{
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+}
+/* Section about */
+#about {
+    text-align: center;
+    width: 700px;
+    padding: 20px; /* Ajoute de l'espace intérieur */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+}
+
+
+
+.card img, .card video{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+nav ul li a.active {
+    color: #bc0000; 
+    font-weight: bold;
+    border-bottom: 2px solid #bc0000;
+}
+nav ul li a:hover {
+    color: #e0115f; /* Rouge emblématique de Louboutin */
+    transition: color 0.3s ease; /* Transition fluide */
+}
+a{
+    text-decoration: none;
+}
+.btn {
+    background-color: #6e0001; /* Couleur de fond rouge sombre */
+    width: 300px;
+    height: 50px;
+    border: none; /* Supprime les bordures */
+    border-radius: 10px; /* Coins arrondis */
+    color: #ffffff; /* Texte blanc */
+    font-size: 16px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centre le texte horizontalement */
+    cursor: pointer; /* Curseur interactif */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    transition: transform 0.2s, background-color 0.2s; /* Animation fluide */
+}
+
+/* Effet au survol */
+.btn:hover {
+    background-color: #8b0000; /* Change la couleur au survol */
+    transform: scale(1.1); /* Agrandit légèrement */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Accentue l'ombre */
+}
+
+.event-point {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 30px; 
+}
+
+.event-point.reverse {
+    flex-direction: row-reverse;
+}
+
+.event-text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.event-image {
+    flex: 1; /* Permet de s'adapter à l'espace disponible */
+    margin-left: 100px;
+}
+
+.event-image img,
+.event-image video {
+    width: 80%; /* L'image ou la vidéo occupe toute la largeur de son conteneur */
+    height: 500px; /* Fixe une hauteur uniforme pour les médias */
+    object-fit: cover; /* Ajuste le contenu pour remplir l'espace sans déformer */
+    border-radius: 10px; /* Arrondi des coins */
+    display: block; /* Assure un comportement cohérent dans le flux */
+}
+
+.event-text h3 {
+    color: #6e0001;
+    font-size: 1.8em;
+}
+
+.event-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}

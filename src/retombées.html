@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retombées de l'Événement</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Bibliothèque Chart.js -->
+    <style>
+        
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+        .chart-container {
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .chart-title {
+            text-align: center;
+            color: #6e0001;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Christian Louboutin</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contexte.html">Contexte</a></li>
+                <li><a href="pourquoi.html">Justification du Choix</a></li>
+                <li><a href="#" class="active">Retombées</a></li>
+                <li><a href="info.html">À Propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 style="color:#6e0001; text-align:center;">Les Retombées de l'Événement</h2>
+            <p style="text-align:justify;">
+                L’accueil de la surprise orchestrée par Christian Louboutin a été marqué par un engouement unanime, tant chez les invités que dans les médias. Le cadre emblématique de la piscine Molitor, combiné à la performance musicale captivante de LP, a suscité des réactions enthousiastes. Les invités ont salué l’audace et l’originalité de cet événement, qui a transformé un simple lancement de collection en une expérience immersive. Les réseaux sociaux ont explosé de commentaires positifs, qualifiant la soirée de <i><b>"chef-d'œuvre artistique"</b></i>. La presse spécialisée a également mis en avant le pari réussi de Louboutin d'allier art, mode et émotion, renforçant ainsi son image d'innovateur dans le luxe.
+            </p>
+
+            <!-- Graphique : Augmentation des ventes -->
+            <div class="chart-container">
+                <h3 class="chart-title">Évolution des Ventes Avant et Après l'Événement</h3>
+                <canvas id="salesChart"></canvas>
+            </div>
+
+            <!-- Graphique : Mentions dans la presse et commentaires -->
+            <div class="chart-container">
+                <h3 class="chart-title">Mentions Presse et Commentaires</h3>
+                <canvas id="feedbackChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Emma Nafaa. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Graphique sur les ventes
+        const salesCtx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(salesCtx, {
+            type: 'line',
+            data: {
+                labels: ['Avant', '1 Mois Après', '2 Mois Après'],
+                datasets: [{
+                    label: 'Ventes (en milliers d’euros)',
+                    data: [120, 180, 220],
+                    borderColor: '#6e0001',
+                    backgroundColor: 'rgba(110, 0, 1, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Ventes (en milliers d’euros)',
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Période',
+                        }
+                    }
+                }
+            }
+        });
+
+        // Graphique sur les mentions presse et commentaires
+        const feedbackCtx = document.getElementById('feedbackChart').getContext('2d');
+        const feedbackChart = new Chart(feedbackCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Mentions Presse', 'Commentaires Positifs', 'Commentaires Négatifs'],
+                datasets: [{
+                    label: 'Nombre',
+                    data: [500, 800, 50],
+                    backgroundColor: ['#6e0001', '#e63946', '#f4a261'],
+                    borderColor: ['#4d0000', '#bf0e30', '#bf7430'],
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Nombre d’Interactions',
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Type d’Interaction',
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

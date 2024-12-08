@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 48%;
+        }
+        #about {
+            color: #6e0001;
+        }
+        #about p {
+            line-height: 1.6;
+        }
+        #contact {
+            color: #6e0001;
+        }
+        #contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        #contact label {
+            margin: 10px 0 5px;
+        }
+        #contact input, #contact textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #6e0001;
+            border-radius: 5px;
+        }
+        #contact textarea {
+            resize: vertical;
+        }
+        #contact input[type="submit"] {
+            background-color: #6e0001;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        #contact input[type="submit"]:hover {
+            background-color: #550000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Christian Louboutin</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contexte.html">Contexte</a></li>
+                <li><a href="pourquoi.html">Justification du choix</a></li>
+                <li><a href="retombées.html">Retombées</a></li>
+                <li><a href="#" class="active">À Propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>À propos de ce site</h2>
+            <p>
+                Ce site a été créé pour explorer les stratégies marketing innovantes de la marque <strong>Christian Louboutin</strong>, 
+                notamment à travers un événement unique qui s'est tenu à la Piscine Molitor à Paris. L'objectif est de comprendre 
+                l'impact de l'événement sur la marque, ainsi que les surprises créées pour marquer les esprits et renforcer l’image 
+                de luxe. En analysant le contexte, la surprise et les retombées de cet événement, ce site vise à offrir une réflexion 
+                sur l'importance des événements exclusifs dans le secteur du luxe.
+            </p>
+            <p>
+                Ce travail a été réalisé par <strong>Emma Nafaa</strong>, étudiante en Master 1 MIAGE à l'<strong>Université Paris-Dauphine</strong> encadré par madame LASRI SARAH. 
+                Le projet s'inscrit dans le cadre d'une étude approfondie des stratégies marketing et de l'impact de ces événements sur 
+                l'image de marque et les ventes.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <p>Si vous avez des questions ou souhaitez en savoir plus, n'hésitez pas à me contacter via le formulaire ci-dessous :</p>
+            <form id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Envoyer">
+            </form>
+            <div id="responseMessage"></div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Emma Nafaa. Tous droits réservés.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche le comportement par défaut (soumission du formulaire)
+    
+        
+                document.getElementById('responseMessage').innerText = 'Votre message a été envoyé avec succès!';
+           
+    });
+</script>
+    
+</body>
+</html>
